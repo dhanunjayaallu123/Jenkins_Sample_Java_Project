@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Clean the Workspace'
 				// Run Maven on a Unix agent.
-                sh "mvn clean"
+                bat "mvn clean"
             }
         }
 		stage('Compile') {
