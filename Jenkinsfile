@@ -20,14 +20,14 @@ pipeline {
             steps {
                 echo 'Compile'
 				// Run Maven on a Unix agent.
-                sh "mvn clean compile"
+                bat "mvn clean compile"
             }
         }
 		stage('Test') {
             steps {
                 echo 'Test'
 				// Run Maven on a Unix agent.
-                sh "mvn clean compile test"
+                bat "mvn clean compile test"
 				
             }
         }
@@ -35,7 +35,7 @@ pipeline {
             steps {
                 echo 'Package the Solution'
 				// Run Maven on a Unix agent.
-                sh "mvn clean compile package"
+                bat "mvn clean compile package"
             }
         }
 		stage('Deploy to UAT') {
